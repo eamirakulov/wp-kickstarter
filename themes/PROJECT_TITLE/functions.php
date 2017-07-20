@@ -36,20 +36,5 @@ if ( function_exists( 'register_nav_menus' ) ) {
 	);
 }
 
-//add_theme_support( 'post-thumbnails' );
-
-//add_action( 'init', 'create_post_type' );
-//function create_post_type() {
-//	register_post_type( 'test',
-//		array(
-//			'labels' => array(
-//				'name' => __( 'Test' ),
-//				'singular_name' => __( 'Test' )
-//			),
-//		'public' => true,
-//		'has_archive' => true,
-//		'supports' => array( 'title', 'editor') 
-//		)
-//	);
-//}
+add_theme_support( 'post-thumbnails' );
 
