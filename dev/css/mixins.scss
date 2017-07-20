@@ -1,0 +1,99 @@
+// Background
+@mixin bg($color:null, $img:null, $repeat:no-repeat, $x:null, $y:null) {
+	@if($img != null) {
+		background: $color url(unquote($img)) $repeat $x $y;
+	}
+	@else {
+		background: $color;
+	}
+}
+
+// Drop shadows
+@mixin box-shadow($shadow...) { 
+	-webkit-box-shadow: $shadow;
+	box-shadow: $shadow;
+}
+
+// Border radius
+@mixin border-radius($r:5px) {
+	-webkit-border-radius: $r;
+	border-radius: $r;
+}
+
+// Sizing
+@mixin size($w:null, $h:null) {
+	width: $w;
+	height: $h;
+}
+
+// Clearfix
+// For clearing floats like a boss h5bp.com/q
+@mixin clearfix {
+	*zoom: 1;
+	&:before,
+	&:after {
+		display: table;
+		content: "";
+		// Fixes Opera/contenteditable bug:
+		// http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+		line-height: 0;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+// CSS image replacement
+// Source: https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757
+@mixin hide-text {
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
+}
+
+// Position
+// Shorthand notation for setting the position of elements in your page.
+@mixin position ($position: relative, $coordinates: 0 0 0 0) {
+
+	@if type-of($position) == list {
+		$coordinates: $position;
+		$position: relative;
+	}
+
+	$top: nth($coordinates, 1);
+	$right: nth($coordinates, 2);
+	$bottom: nth($coordinates, 3);
+	$left: nth($coordinates, 4);
+
+	position: $position;
+
+	@if $top == auto {
+		top: $top;
+	}
+	@else if not(unitless($top)) {
+		top: $top;
+	}
+
+	@if $right == auto {
+		right: $right;
+	}
+	@else if not(unitless($right)) {
+		right: $right;
+	}
+
+	@if $bottom == auto {
+		bottom: $bottom;
+	}
+	@else if not(unitless($bottom)) {
+		bottom: $bottom;
+	}
+
+	@if $left == auto {
+		left: $left;
+	}
+	@else if not(unitless($left)) {
+		left: $left;
+	}
+}

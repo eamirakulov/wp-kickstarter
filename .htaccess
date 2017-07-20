@@ -1,0 +1,2 @@
+# 404 redirect for .git/ and .gitignore
+RedirectMatch 404 "(?:.*)/(?:\.git|.gitignore|dev)(?:/.*)?$"

@@ -1,0 +1,173 @@
+// SCSS Helper mixins
+@import 'mixins';
+
+/**
+* Theme Name: PROJECT_TITLE
+* Version: 1.0
+*/
+
+// Variables
+$link_color: #3B73AF;
+$text_color: #333333;
+
+/**
+ * Body
+ */
+body{
+	@include bg($color: #fff);
+	color: $text_color;
+	a{
+		color: $link_color;
+	}
+}
+.container{
+	padding: 10px;
+	border-radius: 5px;
+	@include bg($color: #DCEAF4);
+	margin: 5px auto;
+}
+
+/**
+ * Header
+ */
+header{
+	padding: 20px 0 0;
+	.logo{}
+	.navbar{
+		min-height: 40px;
+		.navbar-nav{
+			float: none;
+		}
+	}
+	.menu{
+		margin: 0px;
+		padding: 0px;
+		text-align: justify;
+		line-height: 0;
+		text-justify: newspaper;
+		zoom:1;
+		&:after {
+			width: 100%;
+			height: 0;
+			visibility: hidden;
+			overflow: hidden;
+			content: '';
+			display: inline-block;
+		}
+		ul{
+			margin: 0px;
+		}
+		li{
+			display: inline-block;
+			text-align: center;
+			line-height: normal;
+			vertical-align: top;
+			a{
+				text-decoration: none;
+				display: block;
+				color: #999999;
+				text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+				padding: 10px 15px;
+				&:hover{
+					color: #fff;
+				}
+			}
+			&.current-menu-item{
+				a{}
+			}
+		}
+	}
+	.navbar-inverse{
+		margin: 0px;
+		.navbar-brand{
+			display: none;
+		}
+	}
+}
+
+/**
+ * Content
+ */
+.content{
+	h2.entry_title{
+		a{}
+	}
+	.single{}
+	.entry_content{}
+}
+
+/**
+ * Footer
+ */
+footer{}
+
+
+/**
+ * Responsive styles
+ */
+/* Landscape phones and down */
+@media (max-width: 480px) {}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+	.navbar-inner{
+		
+	}
+}
+
+/* Responsive Menu */
+@media (max-width: 979px) {
+	.navbar-inverse{
+		border-radius: 3px;
+		.navbar-brand{
+			display: block !important;
+		}
+		.menu{
+			li{
+				display: block;
+				line-height: normal;
+				text-align: left;
+				a{
+					color: #999999;
+					font-weight: bold;
+					border-radius: 3px;
+					padding: 7px 13px;
+					margin-bottom: 2px;
+					&:hover{
+						color: #fff;
+						@include bg($color: #111111)
+					}
+				}
+			}
+		}
+	}
+}
+
+/**
+ * Helpers
+ */
+.text_right{
+	text-align: right
+}
+.text_center{
+	text-align: center;
+}
+.right{
+	float: right;
+}
+.left{
+	float: left;
+}
+.hidden {
+	display: none !important;
+	visibility: hidden;
+}
+.underline{
+	text-decoration: underline;
+}

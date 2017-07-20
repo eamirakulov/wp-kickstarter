@@ -1,0 +1,9 @@
+{
+	"project_title":		"PROJECT_TITLE",
+
+	"mysql_user":			"root",
+	"mysql_pass":			"root",
+	"mysql_host":			"localhost",
+	"mysql_charset":		"utf8",
+	"mysqldump":			"mysqldump"
+}

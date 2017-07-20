@@ -1,0 +1,11 @@
+dev/.cache/
+dev/node_modules/
+dev/config.json
+dev/img/
+
+themes/PROJECT_TITLE/style.css
+themes/PROJECT_TITLE/js/main.js
+
+bcwsh/
+
+*.sublime-*
